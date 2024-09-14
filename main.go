@@ -100,7 +100,7 @@ func main() {
 	loaded := loadSettings()
 	preventSleep()
 
-	window := g.NewMasterWindow("Anime4K-GUI", 1600, 950, g.MasterWindowFlagsNotResizable)
+	window := g.NewMasterWindow("Anime4K-GUI", 1600, 950)
 	searchHardwareAcceleration()
 
 	if loaded && settings.UseSavedPosition {
