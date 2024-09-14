@@ -12,10 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-
-    - name: Install dependencies
-      run: sudo apt install mesa-common-dev
-
+    - name: Cache APT Packages
+      uses: awalsh128/cache-apt-pkgs-action@v1.4.2
+      with:
+        packages: mesa-common-dev
+            
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
